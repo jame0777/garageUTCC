@@ -4,6 +4,7 @@ if (!isset($_SESSION['user'])) {
     session_destroy();
     header("Location: work.php");
 } else if (isset($_SESSION['user']) != "") {
+    session_destroy();
     header("Location: work.php");
 }
 if (isset($_GET['logout'])) {
